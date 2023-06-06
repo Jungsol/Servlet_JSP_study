@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1>원하는 이미지를 입력해주세요.</h1>
+	<form action="image">
+		<input type="text" name="image">
+		<input type="submit" value="확인">
+	</form>
+</body>
+</html>

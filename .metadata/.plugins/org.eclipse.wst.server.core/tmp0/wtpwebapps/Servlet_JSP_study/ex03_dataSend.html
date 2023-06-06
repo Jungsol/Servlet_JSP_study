@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>서버로 데이터 전송하기</h1>
+	
+	<!-- 
+		서버로 데이터를 전송하기 위한 3요소
+		1. action속성 : 데이터를 전송할 목적지(실행시킬 servlet에 매핑된 문자열 경로)
+		2. name속성 : 서버에서 데이터를 꺼내오기 위한 값
+		3. submit : 서버로 데이터를 전송
+	 -->
+	
+	<form action="dataSend">
+		Data : <input type="text" name="data">		
+		<input type="submit" value="전송">
+	</form>
+
+</body>
+</html>

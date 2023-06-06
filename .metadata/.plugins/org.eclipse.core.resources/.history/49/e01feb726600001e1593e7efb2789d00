@@ -1,0 +1,25 @@
+package kr.or.jstudy;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/Ex02Response")
+public class Ex02Response extends HttpServlet {
+
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		// response 객체 : 사용자에게 정보를 보낼 때 사용
+		// 데이터는 물론, 페이지 이동시에도 사용함.
+
+		PrintWriter out = response.getWriter();
+		out.print("<h1>Hello World!</h1>");
+	}
+  
+}
