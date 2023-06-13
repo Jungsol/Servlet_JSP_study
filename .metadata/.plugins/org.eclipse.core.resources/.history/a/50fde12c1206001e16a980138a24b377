@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<%@ Include file="ex06_header.jsp" %>
+	<hr>
+		<h1>메인페이지</h1>
+	<hr>
+	<%@ Include file="ex06_footer.jsp" %>
+
+</body>
+</html>

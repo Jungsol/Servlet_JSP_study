@@ -1,0 +1,20 @@
+<%@page import="java.util.Calendar"%>
+<%@page import="java.util.GregorianCalendar"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	
+	<!-- 내장된 객체를 사용할 때 import 되어있는지 확인할 것! -->
+	<%
+		GregorianCalendar cal = new GregorianCalendar();
+	%>
+	
+	<%=cal.get(Calendar.YEAR) %>
+</body>
+</html>

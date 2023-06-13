@@ -1,0 +1,17 @@
+<%@page import="org.apache.jasper.compiler.Node.IncludeAction"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<%@ Include file="ex06_header.jsp" %>
+	
+	<%@ Include file="ex06_footer.jsp" %>
+
+</body>
+</html>
