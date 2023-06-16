@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>선택이 어렵다면?</h1>
+	
+	<fieldset>
+		<legend>생성할 아이템 수</legend>
+		
+		<input type="number" name="num">
+		<input type="submit" value="생성">
+	</fieldset>
+</body>
+</html>

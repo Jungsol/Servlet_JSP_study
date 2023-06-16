@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1> 페이지 이동 </h1>
+	
+	<fieldset>
+		<legend>이동할 사이트 선택</legend>
+		<form action="ex12moveURL.jsp">
+			<select name="site">
+			<!-- select는 value를 정의하지 않으면 텍스트 그대로 정보가 넘어감 -->
+				<option value="naver">네이버</option>
+				<option value="daum">다음</option>
+				<option value="google">구글</option>
+			</select>
+			<input type="submit" value="페이지 이동">
+		</form>
+	</fieldset>
+</body>
+</html>

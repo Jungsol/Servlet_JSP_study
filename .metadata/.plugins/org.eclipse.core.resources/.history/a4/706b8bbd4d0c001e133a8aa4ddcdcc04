@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1> 페이지 이동 </h1>
+	
+	<fieldset>
+		<legend>이동할 사이트 선택</legend>
+		<form>
+			<select name="site">
+				<option value="naver">naver</option>
+				<option value="daum">daum</option>
+				<option value="google">google</option>
+			</select>
+			<input type="submit" value="페이지 이동">
+		</form>
+	</fieldset>
+</body>
+</html>

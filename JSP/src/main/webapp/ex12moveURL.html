@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1> 페이지 이동 </h1>
+	<form action="ex12moveURL.jsp">
+
+		<!-- <select name="site">
+		방법1. select는 value를 정의하지 않으면 텍스트 그대로 정보가 넘어감
+			<option value="naver">naver</option>
+			<option>daum</option>
+			<option>google</option>
+		</select> -->
+	
+		<!-- 방법2. 넘기는 값을 처음부터 url로 설정했을 때 -->
+		<select name="site">
+			<option value="https://www.naver.com">naver</option>
+			<option value="https://www.daum.net">daum</option>
+			<option value="https://www.google.com">google</option>
+		</select>
+
+		
+		<input type="submit" value="페이지 이동">	
+	</form>
+</body>
+</html>
