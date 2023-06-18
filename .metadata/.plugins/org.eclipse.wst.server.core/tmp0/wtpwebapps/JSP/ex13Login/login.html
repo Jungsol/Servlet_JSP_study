@@ -17,7 +17,8 @@
 				    <p>로그인 정보를 입력하세요.</p>
 			    </div> 
 			     
-			    <form id="Login" action="login.jsp" method="post">
+			    <!-- <form id="Login" action="login.jsp" method="post"> //MVC패턴 적용 전 -->
+			    <form id="Login" action="../LoginService" method="post">
 			        <div class="form-group">
 			            <input type="text" class="form-control" id="id" name="id" placeholder="Id">
 			        </div>

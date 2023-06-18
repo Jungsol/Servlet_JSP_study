@@ -15,7 +15,7 @@
 		<div class="main-div">
 			<div class="panel">
 				<!-- id를 웹페이지에 출력하시오. -->	
-				<h1><%=request.getParameter("id") %>를 환영합니다.</h1>
+				<h1><%=request.getParameter("nick") %>를 환영합니다.</h1>
 							
 			
 			</div>

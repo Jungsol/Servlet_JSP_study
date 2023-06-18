@@ -12,6 +12,24 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+	<%-- DB연결 전 코드
+	<%
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
+		
+		if(id.equals("smart") && pw.equals("1234")){
+			
+			// 쿼리스트링 형식으로 데이터를 loginTrue.jsp로 전달
+			response.sendRedirect("loginTrue.jsp?id="+id);
+		}else{
+			response.sendRedirect("loginFalse.jsp");
+		}
+	%> --%>
+
+
+
+
 	<%
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
@@ -23,7 +41,7 @@
 		// 전역변수에서 작성해야 finally문에서 실행됨
 		Connection conn = null; // 데이터베이스와 연결하는 객체
 		PreparedStatement psmt = null; //db실행 시켜주는 객체 보안성이 높고 가독성이 좋다.
-		ResultSet rs = null; // 보통 DB select 문에서 사용(실행된 결과를 받아오는 객체)
+		ResultSet rs = null; // 보통 DB select 문에서 사용(prepareStatement를 이용해 실행된 결과를 받아오는 객체)
 		
 		final String driver = "org.mariadb.jdbc.Driver";
 		final String DB_IP = "localhost";
@@ -45,27 +63,25 @@
 			}
 			
 			// --------- 3. 쿼리문 실행
-			String sql = "select * from test_member";
+			String sql="select * from test_member where id = ? and pw = ?";
+			psmt = conn.prepareStatement(sql);
 			
-			psmt = conn.prepareStatement(sql); // ?가 있는 sql문 전송
-			/* setString 예시
-				String sql="select * from test_member where id = ? and pw = ?";
-				psmt = conn.prepareStatement(sql);
-				//setString(?의 인덱스 1부터시작, 매개변수)
-				psmt.setString(1, id); // 첫번째 물음표(sql문을 받고 ?에 매개변수 id 삽입) 
-				psmt.setString(2, pw); // 두번째 물음표
-			*/
+			//setString(?의 인덱스 1부터시작, 매개변수)
+			psmt.setString(1, id); // 첫번째 물음표(sql문을 받고 ?에 매개변수 id 삽입) 
+			psmt.setString(2, pw); // 두번째 물음표
 			
-			//--- 여기까지 쿼리문 정의하는 단계
+			// --- 여기까지 쿼리문 정의하는 단계
 			
 			// --- 여기부터 실행단계
 			rs = psmt.executeQuery(); //쿼리문 실행
 			
-			if(rs.next()){ //db로부터 받은 정보확인 == 쿼리문에 해당하는 데이터가 있다면?
+			if(rs.next()){ //db로부터 받은 정보확인 => 쿼리문에 해당하는 데이터가 있다면?
 				//next() 다음데이터 확인
-				String getNick = rs.getString(3); //getString(3) : select된 세번째 컬럼
-				System.out.print(getNick);
+				String getNick = rs.getString(3);
 				response.sendRedirect("loginTrue.jsp?nick="+getNick);
+				/* String getNick = rs.getString(3); //getString(3) : select된 세번째 컬럼
+				System.out.print(getNick);
+				response.sendRedirect("loginTrue.jsp?nick="+getNick); */
 			}else{
 				System.out.print("실패");
 				response.sendRedirect("loginFalse.jsp");
@@ -83,9 +99,13 @@
 			// --------- 4.데이터베이스 연결 종료
 			// : Connection객체, PreparedStatement객체, ResultSet객체
 			// 종료 순서는 역순으로
+			conn.close(); //MVC패턴 적용 전 코드
+			
+			/* // MVC패턴 적용 후 아래코드로 수정함.
 			try {
 				if (rs != null) {
 					rs.close();
+					System.out.print("rs종료");
 				}
 				if (psmt != null) {
 					psmt.close();
@@ -96,38 +116,12 @@
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
-			}
+			} */
 			
 		}
 		
 	%>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<%-- 
-	<%
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
-		
-		if(id.equals("smart") && pw.equals("1234")){
-			
-			// 쿼리스트링 형식으로 데이터를 loginTrue.jsp로 전달
-			response.sendRedirect("loginTrue.jsp?id="+id);
-		}else{
-			response.sendRedirect("loginFalse.jsp");
-		}
-	%> --%>
 	
 </body>
 </html>
