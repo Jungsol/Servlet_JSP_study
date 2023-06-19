@@ -16,10 +16,10 @@
 		<div class="main-div">
 			<div class="panel">
 				<!-- id를 웹페이지에 출력하시오. -->
-				<%-- <h1><%= request.getParameter("nick") %>님을 환영합니다.</h1> --%>
-				<h1><%=request.getParameter("nick") %>를 환영합니다.</h1>
+				<h1><%=request.getParameter("nick") %>님!<br>회원가입을 축하합니다!	</h1>
 				
-				<a href="logout.jsp">로그아웃</a>
+				
+				<a href="../ex13Login/login.html">로그인</a>
 			
 			
 			</div>
