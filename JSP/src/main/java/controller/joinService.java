@@ -31,9 +31,9 @@ public class joinService extends HttpServlet {
 			
 			
 			/* response.sendRedirect("ex14Join/joinTrue.jsp?nick="+nick); */
-			// 위 코드로 처리할 경우 nick이 한글이면 아래 에러뜨고, 정상처리안됨
-			// - 에러내용 : [ex14Join/joinTrue.jsp?nick=DB저장된 한글 닉네임]인 HTTP 응답 헤더 [Location](이)가 유효하지 않은 값이므로 응답에서 제거되었습니다.
 			// → 위에서 말하는 nick는 단순 전달자역할
+			// 위 코드로 처리할 경우 nick이 한글이면 아래 에러가 뜨면서, 정상처리안됨-> encode필요
+			// - 에러내용 : [ex14Join/joinTrue.jsp?nick=DB저장된 한글 닉네임]인 HTTP 응답 헤더 [Location](이)가 유효하지 않은 값이므로 응답에서 제거되었습니다.
 		} else {
 			response.sendRedirect("ex14Join/joinFalse.jsp");
 		}
