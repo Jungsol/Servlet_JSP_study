@@ -35,7 +35,7 @@ public class LoginService extends HttpServlet {
 		// nick의 값이 null이 아니라면 DB에 정보 있는 것 → != null
 		if(nick != null){ 
 			
-			// 1. session객체 생성
+			// 1. session객체 생성(아래 두가지 기능)
 			//   1) 사용자가 방문을 했다면 세션이 생성되어 있는지 체크하고
 			// 	 2) 생성이 안되어 있다면 생성함
 			HttpSession session = request.getSession();
@@ -43,10 +43,10 @@ public class LoginService extends HttpServlet {
 			// 2. session객체에 닉네임 저장
 			session.setAttribute("user_nick", nick);
 
-			// !! sendRedirect는 이동만 시키고 session을 통해 정보 확인함
-			response.sendRedirect("ex13Login/loginTrue.jsp?");
+			// * sendRedirect는 이동만 시키고 session을 통해 정보 확인함
+			response.sendRedirect("ex13Login/loginTrue.jsp");
 			
-			// ↓session사용 전 이동하는 코드임
+			// ↓ session사용 전 페이지 이동 코드.
 			// * 한글닉네임을 사용자에게 표시할 때 encode 메소드 이용해야 한글표시됨.
 			// response.sendRedirect("ex13Login/loginTrue.jsp?nick="+URLEncoder.encode(nick,"utf-8"));
 			

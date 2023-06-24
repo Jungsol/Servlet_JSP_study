@@ -4,16 +4,18 @@
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="8080"/>
+		<item key="selection" value="google"/>
 		<item key="wrap" value="true"/>
 		<item key="incremental" value="false"/>
 		<list key="findhistory">
+			<item value="google"/>
+			<item value="first"/>
+			<item value="aug"/>
 			<item value="ㅅㅇ공"/>
 			<item value="out."/>
 			<item value="8080"/>
 			<item value="port"/>
 			<item value="utf-"/>
-			<item value="URIenco"/>
 		</list>
 		<list key="replacehistory">
 		</list>
