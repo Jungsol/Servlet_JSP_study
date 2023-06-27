@@ -145,13 +145,13 @@
 			&.style6 { .logo { strong { color: _palette(accent6); } } }
 		}
 
-		body.is-loading & {
+		body.is-preload & {
 			&.alt {
 				opacity: 0;
 			}
 		}
 
-		@include breakpoint(xlarge) {
+		@include breakpoint('<=xlarge') {
 			nav {
 				a {
 					&[href="#menu"] {
@@ -165,7 +165,7 @@
 			}
 		}
 
-		@include breakpoint(large) {
+		@include breakpoint('<=large') {
 			nav {
 				a {
 					&[href="#menu"] {
@@ -179,7 +179,7 @@
 			}
 		}
 
-		@include breakpoint(small) {
+		@include breakpoint('<=small') {
 			height: 2.75em;
 			line-height: 2.75em;
 
@@ -214,7 +214,7 @@
 			}
 		}
 
-		@include breakpoint(xsmall) {
+		@include breakpoint('<=xsmall') {
 			.logo {
 				span {
 					display: none;

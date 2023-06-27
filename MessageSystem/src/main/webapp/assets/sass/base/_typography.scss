@@ -14,15 +14,15 @@
 		letter-spacing: _font(letter-spacing);
 		line-height: 1.65;
 
-		@include breakpoint(xlarge) {
+		@include breakpoint('<=xlarge') {
 			font-size: 14pt;
 		}
 
-		@include breakpoint(large) {
+		@include breakpoint('<=large') {
 			font-size: 12pt;
 		}
 
-		@include breakpoint(xxsmall) {
+		@include breakpoint('<=xxsmall') {
 			font-size: 11pt;
 		}
 	}
@@ -95,7 +95,7 @@
 		font-size: 0.7em;
 	}
 
-	@include breakpoint(small) {
+	@include breakpoint('<=small') {
 		h1 {
 			font-size: 2em;
 		}

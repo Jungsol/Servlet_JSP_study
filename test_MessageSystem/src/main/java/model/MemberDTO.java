@@ -60,6 +60,16 @@ public class MemberDTO {
 		this.address = address;
 	}
 
+	//print할 때 객체를 넣으면 주소값이 나옴. 객체를 생성할 때 내부 값을 한번에 확인하고 싶을 때 사용함
+	@Override
+	public String toString() {
+		// format("%,%,%",1,2,3) %위치에 맞게 값이 입력됨
+		return String.format("MemberDTO:[email:%s, pw:%s, tel:%s, address:%s]", email,pw,tel,address);
+		// 또는 아래 코드로 작성
+		// return "MemberDTO:[email: "+email+", pw: "+pw+"tel: "+tel.."
+	}
+	
+	
 	
 	
 	

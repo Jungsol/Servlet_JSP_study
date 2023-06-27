@@ -8,14 +8,14 @@
 		<item key="wrap" value="true"/>
 		<item key="incremental" value="false"/>
 		<list key="findhistory">
+			<item value="conn"/>
+			<item value="excu"/>
 			<item value="google"/>
 			<item value="first"/>
 			<item value="aug"/>
 			<item value="ㅅㅇ공"/>
 			<item value="out."/>
 			<item value="8080"/>
-			<item value="port"/>
-			<item value="utf-"/>
 		</list>
 		<list key="replacehistory">
 		</list>

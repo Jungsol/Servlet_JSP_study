@@ -144,7 +144,7 @@
 			}
 		}
 
-		@include breakpoint(large) {
+		@include breakpoint('<=large') {
 			article {
 				@include padding(4em, 3em);
 				height: 30vh;
@@ -153,13 +153,13 @@
 			}
 		}
 
-		@include breakpoint(medium) {
+		@include breakpoint('<=medium') {
 			article {
 				width: 50% !important;
 			}
 		}
 
-		@include breakpoint(small) {
+		@include breakpoint('<=small') {
 			article {
 				@include padding(3em, 1.5em);
 				height: 16em;
@@ -172,7 +172,7 @@
 			}
 		}
 
-		@include breakpoint(xsmall) {
+		@include breakpoint('<=xsmall') {
 			display: block;
 
 			article {
