@@ -28,7 +28,9 @@ public class MemberDAO {
 		
 		try {
 			// -- 1. 오라클 드라이버 동적로딩(=실행할 때 로딩 ↔정적로딩:무조건 가지고있음)
+			System.out.println(conn);
 			Class.forName(driver); // 해당 단계에서 에러날 경우 jdbc파일 제대로 추가되어있는지 확인하기
+			System.out.println(conn);
 			// -- 2. 데이터베이스 연동
 			// 프로젝트 진행시 localhost는 바뀔 수 있음. DB저장된 IP주소를 작성하면 됨
 			conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PW);
@@ -61,6 +63,7 @@ public class MemberDAO {
 	// join메소드 → DB에 저장될 수 있게 하기위한 메소드
 	// MemberDTO클래스에는 회원정보가 저장되어 있음
 	public int member_join(MemberDTO member) {
+		System.out.println(conn);
 		try {
 			connection();
 		
